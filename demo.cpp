@@ -181,45 +181,24 @@ int main(){
             ss<<a_req[2];
             ss>>unit;
             if((name =="r1")&& unit ==1){
-                if(prm.rcb[0].remaining>=unit){
                 prm.request_resource(0,unit);
                 std::cout<<"        requset resources succeed"<<endl;
-                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<std::endl;}
-                else
-                {
-                    std::cout<<"        error (invalid requesets: the request number of resources is more than remains"<<endl;
-                }
+                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<std::endl;
                 
             }else if((name =="r2") && (0<unit && unit <=2)){
-                if(prm.rcb[1].remaining>=unit){
                 prm.request_resource(1,unit);
                 std::cout<<"        requset resources succeed"<<endl;
-                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;}
-                else
-                {
-                    std::cout<<"        error (invalid requesets: the request number of resources is more than remains"<<endl;
-                }
+                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;
             }else if ((name=="r3") && (unit>0 && unit<=3)){
-                if(prm.rcb[2].remaining>=unit){
                 prm.request_resource(2,unit);
                 std::cout<<"        requset resources succeed"<<endl;
-                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;}
-                else
-                {
-                    std::cout<<"        error (invalid requesets: the request number of resources is more than remains"<<endl;
-                }
+                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;
                 
             }else if ((name =="r4") && (unit >0 && unit<=4))
             {
-                if(prm.rcb[3].remaining>=unit){
                 prm.request_resource(3,unit);
                 std::cout<<"        requset resources succeed"<<endl;
-                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;}
-                else
-                {
-                    std::cout<<"        error (invalid requesets: the request number of resources is more than remains"<<endl;
-                }
-                
+                std::cout<<"        Current_running_process:    "+prm.pcb[prm.current_running].pid<<" "<<endl;
             }else
             {
                 std::cout<<"        error (invalid requests: less opreator or more opreator)"<<" "<<endl;
